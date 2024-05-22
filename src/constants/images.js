@@ -27,7 +27,7 @@ import swiftCart from "../assets/MERN ecommerce website.png";
 import ittakeshopping from "../assets/php ecommerce website.png";
 import infiniteInsight from "../assets/Blog website frame.png";
 import blueBettle from "../assets/todo list app frame.png";
-import dictionaryApp from "../assets/dictionary app frame.png";
+import dictionaryApp from "../assets/Dictionary app frame.png";
 import keyMaster from "../assets/typing game frame.png";
 import simonGame from "../assets/simon game.png";
 import reactWhiz from "../assets/React Whiz.png";
