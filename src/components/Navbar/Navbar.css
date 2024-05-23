@@ -61,6 +61,21 @@
   background-color: var(--secondary-color);
 }
 
+.cv-link {
+  color: #333; 
+  text-decoration: none;
+  padding: 10px 15px; 
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.cv-link:hover {
+  color: #007bff; 
+  border-color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
 @media screen and (max-width: 500px) {
   .app__navbar-links {
     display: none;
