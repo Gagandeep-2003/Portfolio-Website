@@ -71,4 +71,12 @@ export const data = [
     tags: [`All`, `Static`],
     imgname: `reactWhiz`,
   },
+  {
+    title: `Two Good Co`,
+    description: `Discover this modern landing page with GSAP and Locomotive Scroll. Enjoy smooth animations and enhanced user experience.`,
+    projectLink: `https://twogoodco-xi.vercel.app/`,
+    codeLink: `https://github.com/Gagandeep-2003/landing-page-gsap-locomotive`,
+    tags: [`All`, `Static`],
+    imgname: `twoGoodCo`,
+  },
 ];
