@@ -39,6 +39,7 @@ import weather from "../assets/weather.png";
 import saleslancer from "../assets/saleslancer.png";
 import epiclegion from "../assets/epiclegion.png";
 import bankist from "../assets/bankist.png";
+import twoGoodCo from "../assets/two_good_co.png";
 
 export default {
   swiftCart,
@@ -50,6 +51,7 @@ export default {
   simonGame,
   reactWhiz,
   saleslancer,
+  twoGoodCo,
   epiclegion,
   weather,
   bankist,
