@@ -2,7 +2,7 @@ import React from 'react';
 import { ReactLenis } from '@studio-freight/react-lenis';
 import { Header, About, Work, Skills, Footer } from './container';
 import { Navbar } from './components';
-import LoadingPage from './container/LoadingPage/loadingPage';
+import LoadingPage from './container/LoadingPage/LoadingPage';
 import MouseFollowerEffect from './components/MouseFollowerEffect/MouseFollowerEffect'; 
 import './App.css';
 
