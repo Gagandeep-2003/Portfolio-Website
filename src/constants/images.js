@@ -26,6 +26,7 @@ import circle from "../assets/circle.svg";
 import swiftCart from "../assets/MERN ecommerce website.png";
 import ittakeshopping from "../assets/php ecommerce website.png";
 import infiniteInsight from "../assets/Blog website frame.png";
+import BeatCancer from "../assets/BeatCancer.png";
 import blueBettle from "../assets/todo list app frame.png";
 import dictionaryApp from "../assets/Dictionary app frame.png";
 import keyMaster from "../assets/typing game frame.png";
@@ -39,7 +40,6 @@ import weather from "../assets/weather.png";
 import saleslancer from "../assets/saleslancer.png";
 import epiclegion from "../assets/epiclegion.png";
 import bankist from "../assets/bankist.png";
-import twoGoodCo from "../assets/two_good_co.png";
 
 export default {
   swiftCart,
@@ -51,12 +51,12 @@ export default {
   simonGame,
   reactWhiz,
   saleslancer,
-  twoGoodCo,
   epiclegion,
   weather,
   bankist,
   pickgame,
   logify,
+  BeatCancer,
   oldportfolio,
   guessthenum,
   email,
