@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
-import "./LoadingPage.css";
+import "./loadingPage.css";
 
 const LoadingPage = () => {
   useEffect(() => {
