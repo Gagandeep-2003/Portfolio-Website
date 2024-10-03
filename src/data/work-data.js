@@ -79,4 +79,12 @@ export const data = [
     tags: [`All`, `Static`],
     imgname: `twoGoodCo`,
   },
+  {
+    title: `BeatCancer`,
+    description: `Next.js and TypeScript app for real-time patient data analysis with AI-driven treatment planning and responsive design using TailwindCss.`,
+    projectLink: `https://github.com/Gagandeep-2003/smack-cancer`,
+    codeLink: `https://github.com/Gagandeep-2003/smack-cancer`,
+    tags: [`All`, `Best`, `Dynamic`],
+    imgname: `BeatCancer`,
+  },
 ];
