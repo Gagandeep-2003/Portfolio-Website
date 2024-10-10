@@ -27,7 +27,7 @@ import swiftCart from "../assets/MERN ecommerce website.png";
 import ittakeshopping from "../assets/php ecommerce website.png";
 import infiniteInsight from "../assets/Blog website frame.png";
 import BeatCancer from "../assets/BeatCancer.png";
-import twogoodco from "../assets/two_good_co.png";
+import twoGoodCo from "../assets/two_good_co.png";
 import blueBettle from "../assets/todo list app frame.png";
 import dictionaryApp from "../assets/Dictionary app frame.png";
 import keyMaster from "../assets/typing game frame.png";
@@ -58,7 +58,7 @@ export default {
   pickgame,
   logify,
   BeatCancer,
-  twogoodco,
+  twoGoodCo,
   oldportfolio,
   guessthenum,
   email,
