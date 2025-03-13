@@ -12,6 +12,7 @@ const TabSwitcher = ({ sections }) => {
   const [ctrlPressed, setCtrlPressed] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
   const containerRef = useRef(null);
+  const helpContentRef = useRef(null);
 
   // Audio objects
   const toggleSound = useRef(new Audio(toggleSoundUrl));
@@ -79,6 +80,20 @@ const TabSwitcher = ({ sections }) => {
     };
   }, [isVisible, ctrlPressed, activeIndex, previousIndex]);
 
+  // Close help popup when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showHelp && helpContentRef.current && !helpContentRef.current.contains(event.target)) {
+        setShowHelp(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [showHelp]);
+
   const navigateTab = (direction) => {
     setActiveIndex((prev) => {
       const newIndex = (prev + direction + sections.length) % sections.length;
@@ -114,7 +129,8 @@ const TabSwitcher = ({ sections }) => {
     }
   }, [activeIndex, isVisible]);
 
-  const toggleHelp = () => {
+  const toggleHelp = (e) => {
+    e.stopPropagation(); // Prevent event bubbling
     setShowHelp(!showHelp);
     toggleSound.current.play();
   };
@@ -130,11 +146,11 @@ const TabSwitcher = ({ sections }) => {
 
   // Help popup component
   const HelpPopup = () => (
-    <div className="help-popup">
-      <div className="help-popup-content">
+    <div className="help-popup" onClick={() => setShowHelp(false)}>
+      <div className="help-popup-content" ref={helpContentRef} onClick={(e) => e.stopPropagation()}>
         <div className="help-popup-header">
           <h3>Tab Switcher Shortcuts</h3>
-          <button className="close-button" onClick={toggleHelp}>×</button>
+          <button className="close-button" onClick={() => setShowHelp(false)}>×</button>
         </div>
         <div className="help-popup-body">
           <p><strong>Open Tab Switcher:</strong> Press <span className="keyboard-shortcut">Ctrl</span> + <span className="keyboard-shortcut">Q</span></p>
