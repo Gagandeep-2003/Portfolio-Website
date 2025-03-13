@@ -318,6 +318,12 @@ const SpotlightSearch = ({ sections, skills, works }) => {
       if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
       }
+    } else if (result.category === categories.SKILL) {
+      // Navigate to the skills section
+      const skillsSection = document.getElementById('skills'); // Replace with the actual ID of the skills section
+      if (skillsSection) {
+        skillsSection.scrollIntoView({ behavior: 'smooth' });
+      }
     } else if (result.category === categories.PROJECT && result.link) {
       window.open(result.link, '_blank');
     }
