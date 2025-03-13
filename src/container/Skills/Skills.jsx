@@ -7,7 +7,7 @@ import { images } from "../../constants";
 import "./Skills.css";
 
 
-const Skills = () => {
+const Skills = ({ id = 'skills' }) => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="app__skills" id="skills">
+    <section className="app__skills" id={id}>
       <h2 className="head-text">Skills & Experience</h2>
 
       <div className="app__skills-container">
