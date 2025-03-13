@@ -1,9 +1,9 @@
 export const data = [
   {
-    title: `SwiftCart`,
-    description: `Developed a full-featured e-commerce website using the MERN stack with user authentication, admin panel, password recovery, and payment gateway integration.`,
-    projectLink: `https://burgundy-centipede-sari.cyclic.app/`,
-    codeLink: "https://github.com/Gagandeep-2003/ecommerce-website-MERN",
+    title: `Infinite Insights`,
+    description: `Built an AI-powered author-reader platform enabling authors to create, manage, and categorize books, while readers can explore, filter, and purchase them seamlessly. Integrated AI-driven idea generation and book summaries using Gemini AI.`,
+    projectLink: `https://infinite-insights-1.onrender.com`,
+    codeLink: "https://github.com/Gagandeep-2003/Infinite-insights",
     tags: [`All`, `Best`, `Dynamic`],
     imgname: `swiftCart`,
   },
