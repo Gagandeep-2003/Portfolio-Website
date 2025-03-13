@@ -4,7 +4,7 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import emailjs from "emailjs-com";
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({ id = 'footer' }) => {
   const copyText = function (e) {
     let parentDiv = e.currentTarget;
     let button = parentDiv.children[1];
@@ -65,7 +65,7 @@ const Footer = () => {
   };
 
   return (
-    <div id="contact" style={{ paddingTop: "6rem" }}>
+    <div id={id} style={{ paddingTop: "6rem" }}>
       <h2 className="head-text">Take a coffee & chat with me</h2>
 
       <div className="app__footer-cards">
