@@ -9,7 +9,7 @@ import { gsap } from "gsap";
 import "./Work.css";
 import Reveal from "../Reveal/Reveal";
 
-const Work = () => {
+const Work = ({ id = 'work' }) => {
   const [isTouchScreen, setIsTouchScreen] = useState(false);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
@@ -89,7 +89,7 @@ const Work = () => {
   };
 
   return (
-    <section className="app__work" id="work">
+    <section className="app__work" id={id}>
       <h2 className="head-text hacker-effect">
         My creative <span>Portfolio</span> section
       </h2>
