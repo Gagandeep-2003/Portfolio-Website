@@ -152,12 +152,13 @@ const TabSwitcher = ({ sections }) => {
           <h3>Tab Switcher Shortcuts</h3>
           <button className="close-button" onClick={() => setShowHelp(false)}>×</button>
         </div>
-        <div className="help-popup-body">
+       <div className="help-popup-body">
           <p><strong>Open Tab Switcher:</strong> Press <span className="keyboard-shortcut">Ctrl</span> + <span className="keyboard-shortcut">Q</span></p>
           <p><strong>Navigate Between Tabs:</strong> Use <span className="keyboard-shortcut">←</span> and <span className="keyboard-shortcut">→</span> arrow keys</p>
           <p><strong>Cycle Through Tabs:</strong> Keep holding <span className="keyboard-shortcut">Ctrl</span> and press <span className="keyboard-shortcut">Q</span> multiple times</p>
           <p><strong>Select a Tab:</strong> Release <span className="keyboard-shortcut">Ctrl</span> key or click on a tab preview</p>
           <p><strong>Quick Switch:</strong> Press <span className="keyboard-shortcut">Ctrl</span> + <span className="keyboard-shortcut">Q</span> once to switch between current and previous section</p>
+          <p><strong>Open Spotlight Search:</strong> Press <span className="keyboard-shortcut">Ctrl</span> + <span className="keyboard-shortcut">Space</span></p>
         </div>
       </div>
     </div>
