@@ -385,7 +385,7 @@
 /* Shortcut button */
 .spotlight-shortcut-hint {
   position: fixed;
-  top: 30px;
+  top: 60px;
   right: 30px;
   z-index: 9998;
 }
