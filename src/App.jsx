@@ -3,7 +3,8 @@ import { ReactLenis } from '@studio-freight/react-lenis';
 import { Header, About, Work, Skills, Footer } from './container';
 import { Navbar } from './components';
 import LoadingPage from './container/LoadingPage/LoadingPage';
-import MouseFollowerEffect from './components/MouseFollowerEffect/MouseFollowerEffect';
+// Commenting out MouseFollowerEffect to prevent conflicts with TabSwitcher
+// import MouseFollowerEffect from './components/MouseFollowerEffect/MouseFollowerEffect';
 import TabSwitcher from './components/TabSwitcher/TabSwitcher';
 import './App.css';
 
@@ -39,7 +40,8 @@ const App = () => {
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1, smoothTouch: true }}>
       <div className="app">
-        <MouseFollowerEffect />
+        {/* Commenting out MouseFollowerEffect to prevent conflicts with TabSwitcher */}
+        {/* <MouseFollowerEffect /> */}
         <Navbar />
         <Header id="header" />
         <About id="about" />
