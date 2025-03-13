@@ -6,6 +6,9 @@ import LoadingPage from './container/LoadingPage/LoadingPage';
 // Commenting out MouseFollowerEffect to prevent conflicts with TabSwitcher
 // import MouseFollowerEffect from './components/MouseFollowerEffect/MouseFollowerEffect';
 import TabSwitcher from './components/TabSwitcher/TabSwitcher';
+import SpotlightSearch from './components/SpotlightSearch/SpotlightSearch';
+import { data as skillsData } from './data/skills-data';
+import { data as worksData } from './data/work-data';
 import './App.css';
 
 const sections = [
@@ -50,6 +53,7 @@ const App = () => {
         <Footer id="footer" />
         <LoadingPage />
         <TabSwitcher sections={sections} />
+        <SpotlightSearch sections={sections} skills={skillsData} works={worksData} />
       </div>
     </ReactLenis>
   );
