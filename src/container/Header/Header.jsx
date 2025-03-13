@@ -17,12 +17,12 @@ const scaleVariants = {
   },
 };
 
-const Header = () => {
+const Header = ({ id = 'home' }) => {
   const name = useRef();
   const heading = useRef();
 
   return (
-    <div className="app__header " id="home">
+    <div className="app__header" id={id}>
       <header className="app__flex">
         <HeroCenter />
         <motion.div
