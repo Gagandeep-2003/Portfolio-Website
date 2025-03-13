@@ -6,14 +6,14 @@ import "./About.css";
 import Reveal from "../Reveal/Reveal";
 import Tilt from "react-tilty";
 
-const About = () => {
+const About = ({ id = 'about' }) => {
   const [abouts, setabouts] = useState([]);
   useEffect(() => {
     setabouts(data);
   }, []);
 
   return (
-    <div className="app__about" id="about">
+    <div className="app__about" id={id}>
       <h2 className="head-text">
         I Know That <span>Good Design</span>
         <br /> Means <span>Good Business</span>
