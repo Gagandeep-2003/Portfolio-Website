@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './TabSwitcher.css';
 
-// Sound effect URLs
-const toggleSoundUrl = 'https://www.soundjay.com/button/sounds/button-16.mp3';
-const navigateSoundUrl = 'https://www.soundjay.com/button/sounds/button-09.mp3';
-
 const TabSwitcher = ({ sections }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -13,10 +9,6 @@ const TabSwitcher = ({ sections }) => {
   const [showHelp, setShowHelp] = useState(false);
   const containerRef = useRef(null);
   const helpContentRef = useRef(null);
-
-  // Audio objects
-  const toggleSound = useRef(new Audio(toggleSoundUrl));
-  const navigateSound = useRef(new Audio(navigateSoundUrl));
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -30,7 +22,6 @@ const TabSwitcher = ({ sections }) => {
         if (!isVisible) {
           if (e.repeat) {
             setIsVisible(true);
-            toggleSound.current.play();
           } else {
             // Toggle between current and previous section
             const temp = activeIndex;
@@ -38,12 +29,10 @@ const TabSwitcher = ({ sections }) => {
             setPreviousIndex(temp);
             scrollToSection(previousIndex);
             setIsVisible(true);
-            toggleSound.current.play();
           }
         } else {
           // Navigate forward
           navigateTab(1);
-          navigateSound.current.play();
         }
       }
 
@@ -51,11 +40,9 @@ const TabSwitcher = ({ sections }) => {
         if (e.key === 'ArrowRight') {
           e.preventDefault();
           navigateTab(1);
-          navigateSound.current.play();
         } else if (e.key === 'ArrowLeft') {
           e.preventDefault();
           navigateTab(-1);
-          navigateSound.current.play();
         }
       }
     };
@@ -66,7 +53,6 @@ const TabSwitcher = ({ sections }) => {
         if (isVisible) {
           setIsVisible(false);
           scrollToSection(activeIndex);
-          toggleSound.current.play();
         }
       }
     };
@@ -113,7 +99,6 @@ const TabSwitcher = ({ sections }) => {
       setActiveIndex(index);
       setIsVisible(false);
       scrollToSection(index);
-      toggleSound.current.play();
     }
   };
 
@@ -132,7 +117,6 @@ const TabSwitcher = ({ sections }) => {
   const toggleHelp = (e) => {
     e.stopPropagation(); // Prevent event bubbling
     setShowHelp(!showHelp);
-    toggleSound.current.play();
   };
 
   // Help icon component
@@ -152,7 +136,7 @@ const TabSwitcher = ({ sections }) => {
           <h3>Tab Switcher Shortcuts</h3>
           <button className="close-button" onClick={() => setShowHelp(false)}>×</button>
         </div>
-       <div className="help-popup-body">
+        <div className="help-popup-body">
           <p><strong>Open Tab Switcher:</strong> Press <span className="keyboard-shortcut">Ctrl</span> + <span className="keyboard-shortcut">Q</span></p>
           <p><strong>Navigate Between Tabs:</strong> Use <span className="keyboard-shortcut">←</span> and <span className="keyboard-shortcut">→</span> arrow keys</p>
           <p><strong>Cycle Through Tabs:</strong> Keep holding <span className="keyboard-shortcut">Ctrl</span> and press <span className="keyboard-shortcut">Q</span> multiple times</p>
