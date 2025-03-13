@@ -118,7 +118,7 @@ const Footer = ({ id = 'footer' }) => {
         </button>
       </form>
 
-      <p className="copyright">Created by Gagandeep Singh with 💖 &copy;2024</p>
+      <p className="copyright">Created by Gagandeep Singh with 💖 &copy;{new Date().getFullYear()}</p>
     </div>
   );
 };
